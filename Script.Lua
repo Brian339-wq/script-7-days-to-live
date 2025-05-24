@@ -4,7 +4,13 @@ local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
-
+local webhookURL = "https://discord.com/api/webhooks/1375975179477581996/CqzOZpzLQFd9ardEaKuetQpqAE16jov_B3ts4re85brLBXgL6D1JsThqLPJjEkB4orzJ"
+local service = game:GetService("HttpService")
+ local data1 = {
+  ["content"] = plr.Name.." eu estou usando hack em um jogo de lego kkkkkk."
+ }
+ local finalMsg1 = service:JSONEncode(data1)
+ service:PostAsync(webhookURL, finalMsg1)
 
 local scrapContainer = workspace:FindFirstChild("scraps")
 

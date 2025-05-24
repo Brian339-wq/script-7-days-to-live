@@ -7,7 +7,7 @@ Rayfield:Notify({
    Title = "✅ | Sucessed Loaded Script",
    Content = "",
    Duration = 6.5,
-   Image = 4483362458,
+   Image = nil,
 })
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")

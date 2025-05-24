@@ -1,12 +1,4 @@
 
-
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-Rayfield:Notify({
-   Title = "✅ | Sucessed Loaded Script",
-   Content = "",
-   Duration = 6.5,
-   Image = nil,
-})
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer

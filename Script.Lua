@@ -9,10 +9,13 @@ local hrp = character:WaitForChild("HumanoidRootPart")
 local scrapContainer = workspace:FindFirstChild("scraps")
 
 -- Verifica se há scraps
+while true do 
+wait(0.1)
 if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     -- Nenhum scrap encontrado, dar rejoin no jogo
     TeleportService:Teleport(game.PlaceId, player)
     return
+end
 end
 
 -- Salva posição original

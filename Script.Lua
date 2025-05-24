@@ -1,4 +1,7 @@
-
+local scrapContainer = workspace:FindFirstChild("scraps")
+if not scrapContainer then
+return
+end
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer
@@ -7,7 +10,6 @@ local hrp = character:WaitForChild("HumanoidRootPart")
 
 hrp.anchored = true
 
-local scrapContainer = workspace:FindFirstChild("scraps")
 
 if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     -- Nenhum scrap encontrado, dar rejoin no jogo
@@ -29,4 +31,9 @@ for _, scrap in pairs(scrapContainer:GetChildren()) do
             wait(0.2)
         end
     end
+end
+
+while true do
+wait(1)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Brian339-wq/script-7-days-to-live/refs/heads/main/Script.Lua'))()
 end

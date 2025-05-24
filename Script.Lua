@@ -6,7 +6,7 @@ local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
 
-hrp.anchored = true
+hrp.Anchored = true
 
 
 if not scrapContainer or #scrapContainer:GetChildren() == 0 then

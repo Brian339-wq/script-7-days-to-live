@@ -1,7 +1,5 @@
 local scrapContainer = workspace:FindFirstChild("scraps")
-if not scrapContainer then
-return
-end
+
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer

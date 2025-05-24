@@ -1,23 +1,20 @@
+
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
 
--- Referência ao container de scraps
+
 local scrapContainer = workspace:FindFirstChild("scraps")
 
--- Verifica se há scraps
-while true do 
-wait(0.1)
+
 if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     -- Nenhum scrap encontrado, dar rejoin no jogo
     TeleportService:Teleport(game.PlaceId, player)
     return
 end
-end
 
--- Salva posição original
 local originalCFrame = hrp.CFrame
 
 -- Percorre scraps
@@ -35,5 +32,5 @@ for _, scrap in pairs(scrapContainer:GetChildren()) do
     end
 end
 
--- Retorna para a posição original
+
 hrp.CFrame = originalCFrame

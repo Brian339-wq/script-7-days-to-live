@@ -5,6 +5,7 @@ local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
 
+hrp.anchored = true
 
 local scrapContainer = workspace:FindFirstChild("scraps")
 

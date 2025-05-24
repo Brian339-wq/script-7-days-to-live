@@ -1,6 +1,14 @@
 if game.PlaceId == "17474746614" then
 Return
 end
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+Rayfield:Notify({
+   Title = "✅ | Sucessed Loaded Script",
+   Content = "",
+   Duration = 6.5,
+   Image = 4483362458,
+})
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer

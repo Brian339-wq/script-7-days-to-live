@@ -5,6 +5,7 @@ local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
 
+
 local scrapContainer = workspace:FindFirstChild("scraps")
 
 
@@ -14,9 +15,10 @@ if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     return
 end
 
+
 local originalCFrame = hrp.CFrame
 
--- Percorre scraps
+
 for _, scrap in pairs(scrapContainer:GetChildren()) do
     local material = scrap:FindFirstChild("defaultMaterial10")
     if material then

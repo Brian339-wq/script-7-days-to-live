@@ -8,13 +8,11 @@ local hrp = character:WaitForChild("HumanoidRootPart")
 
 hrp.Anchored = true
 
-
 if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     -- Nenhum scrap encontrado, dar rejoin no jogo
     TeleportService:Teleport(game.PlaceId, player)
     return
 end
-
 
 -- Percorre scraps
 for _, scrap in pairs(scrapContainer:GetChildren()) do
@@ -30,5 +28,3 @@ for _, scrap in pairs(scrapContainer:GetChildren()) do
         end
     end
 end
-
-

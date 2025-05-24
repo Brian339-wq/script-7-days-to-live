@@ -1,6 +1,4 @@
-if game.PlaceId == "17474746614" then
-Return
-end
+
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 Rayfield:Notify({

@@ -1,4 +1,3 @@
-local scrapContainer = workspace:FindFirstChild("scraps")
 
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
@@ -6,7 +5,8 @@ local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
 
-hrp.Anchored = true
+
+local scrapContainer = workspace:FindFirstChild("scraps")
 
 if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     -- Nenhum scrap encontrado, dar rejoin no jogo
@@ -14,7 +14,6 @@ if not scrapContainer or #scrapContainer:GetChildren() == 0 then
     return
 end
 
--- Percorre scraps
 for _, scrap in pairs(scrapContainer:GetChildren()) do
     local material = scrap:FindFirstChild("defaultMaterial10")
     if material then
@@ -28,3 +27,4 @@ for _, scrap in pairs(scrapContainer:GetChildren()) do
         end
     end
 end
+

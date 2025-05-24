@@ -1,4 +1,6 @@
-
+if game.PlaceId == "17474746614" then
+Return
+end
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local player = Players.LocalPlayer

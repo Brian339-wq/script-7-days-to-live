@@ -31,7 +31,4 @@ for _, scrap in pairs(scrapContainer:GetChildren()) do
     end
 end
 
-while true do
-wait(1)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Brian339-wq/script-7-days-to-live/refs/heads/main/Script.Lua'))()
-end
+

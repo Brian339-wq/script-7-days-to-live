@@ -1,3 +1,4 @@
+pcall(function()
 print("tpl | Loading Rayfield Libraly . . .")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 print("loaded!")
@@ -84,3 +85,6 @@ value = false
     end
    end,
 })
+
+  
+end)

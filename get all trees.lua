@@ -28,17 +28,25 @@ local function olharParaTronco(trunk)
     hrp.CFrame = CFrame.new(hrp.Position, trunkPosition)
 end
 
+-- Função para ativar o ProximityPrompt de um log
+local function ativarProximityPrompt(logg)
+    local main = logg:FindFirstChild("main")
+    if main then
+        local prompt = main:FindFirstChild("ProximityPrompt")
+        if prompt then
+            -- Garantir que o ProximityPrompt está ativado
+            fireproximityprompt(prompt)
+            return true
+        end
+    end
+    return false
+end
+
 -- Função que interage com todos os troncos da pasta Logs
 local function getalllogs()
     for _, logg in pairs(game.Workspace.Logs:GetChildren()) do
-        local main = logg:FindFirstChild("main")
-        if main then
-            local prompt = main:FindFirstChild("ProximityPrompt")
-            if prompt then
-                task.wait(0.2)
-                fireproximityprompt(prompt)
-                task.wait(0.2)
-            end
+        if ativarProximityPrompt(logg) then
+            print("ProximityPrompt ativado no log:", logg.Name)
         end
     end
 end
